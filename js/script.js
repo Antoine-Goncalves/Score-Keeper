@@ -22,7 +22,7 @@ let scoreMax = 5;
 
 function addScoreForPlayer1() {
 	
-	if ( goalPlayer1 < scoreMax && goalPlayer2 != scoreMax) {
+	if (goalPlayer1 < scoreMax && goalPlayer2 != scoreMax) {
 		
 		goalPlayer1++;
 
@@ -51,15 +51,16 @@ function stopTheMatch() {
 	if (goalPlayer1 >= scoreMax) {
 
 		goalPlayer1 = scoreMax;
+		scorePlayer1.classList.add("win");
 	}
 
 	if (goalPlayer2 >= scoreMax) {
 	
 		goalPlayer2 = scoreMax;
+		scorePlayer2.classList.add("win");
 	}
 
 }
-
 
 function resetAll() {
 	
@@ -69,10 +70,23 @@ function resetAll() {
 
 	scorePlayer1.textContent = 0;
 
+	scorePlayer1.classList.remove("win");
+
 	scorePlayer2.textContent = 0;
+
+	scorePlayer2.classList.remove("win");
 
 	numFinalToWin.textContent = scoreMax;
 
+}
+
+function chooseScoreMax() {
+	
+	numFinalToWin.textContent = input.value;
+	
+	scoreMax = Number(input.value);
+
+	resetAll();
 }
 
 buttonPlayer1.addEventListener("click", addScoreForPlayer1);
@@ -80,3 +94,5 @@ buttonPlayer1.addEventListener("click", addScoreForPlayer1);
 buttonPlayer2.addEventListener("click", addScoreForPlayer2);
 
 buttonReset.addEventListener("click", resetAll);
+
+input.addEventListener("change", chooseScoreMax);
