@@ -1,3 +1,28 @@
 .win {
 	color: green;
 }
+
+body {
+	text-align: center;
+	background-image: url("../image/pelouse.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+h1,h2 {
+	color: white;
+}
+
+.player1 {
+	color: green;
+}
+
+.player2 {
+	color: red;
+}
+
+.reset {
+	color: yellow;
+}
+
