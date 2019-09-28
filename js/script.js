@@ -14,6 +14,8 @@ const scorePlayer2 = document.querySelectorAll("span")[1];
 
 const numFinalToWin = document.querySelectorAll("span")[2];
 
+const darkMode = document.querySelector(".darkMode");
+
 let goalPlayer1 = 0;
 
 let goalPlayer2 = 0;
@@ -89,6 +91,18 @@ function chooseScoreMax() {
 	resetAll();
 }
 
+function addDarkMode() {
+	let color = document.body.style.backgroundColor;
+
+    	if (color == "") {
+        	
+		document.body.style.backgroundColor = "#0D0D0D";
+    	} else {
+		document.body.style.backgroundColor = "";
+	}
+    	
+}
+
 buttonPlayer1.addEventListener("click", addScoreForPlayer1);
 
 buttonPlayer2.addEventListener("click", addScoreForPlayer2);
@@ -96,3 +110,5 @@ buttonPlayer2.addEventListener("click", addScoreForPlayer2);
 buttonReset.addEventListener("click", resetAll);
 
 input.addEventListener("change", chooseScoreMax);
+
+darkMode.addEventListener("click", addDarkMode);
