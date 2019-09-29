@@ -54,12 +54,14 @@ function stopTheMatch() {
 
 		goalPlayer1 = scoreMax;
 		scorePlayer1.classList.add("win");
+		alert("ZUUUUUHHH, Ronaldo is the best 🇵🇹 ! Revenge ?");
 	}
 
 	if (goalPlayer2 >= scoreMax) {
 	
 		goalPlayer2 = scoreMax;
 		scorePlayer2.classList.add("win");
+		alert("Strange, Messi win 🇦🇷 ! Revenge ?");
 	}
 
 }
@@ -79,6 +81,12 @@ function resetAll() {
 	scorePlayer2.classList.remove("win");
 
 	numFinalToWin.textContent = scoreMax;
+
+}
+
+function nextGame() {
+
+	alert("⚽ Again ? You're already addicted ! ⚽");
 
 }
 
@@ -108,6 +116,8 @@ buttonPlayer1.addEventListener("click", addScoreForPlayer1);
 buttonPlayer2.addEventListener("click", addScoreForPlayer2);
 
 buttonReset.addEventListener("click", resetAll);
+
+buttonReset.addEventListener("click", nextGame);
 
 input.addEventListener("change", chooseScoreMax);
 
