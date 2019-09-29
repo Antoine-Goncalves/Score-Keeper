@@ -4,25 +4,40 @@
 
 body {
 	text-align: center;
-	background-image: url("../image/pelouse.jpg");
+	background-image: url("../image/fond.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-top: 10rem;
 }
 
+input {
+	color: black;
+}
 
 h1,h2 {
-	color: white;
+	color: goldenrod;
 }
 
 .player1 {
-	color: green;
+	padding: 3rem;
+	background-image: url(../image/cr7.jpg);
+	background-size: cover;
+	padding-bottom: 4rem;
+	border: solid green;
 }
 
 .player2 {
-	color: red;
+	padding: 3rem;
+	background-image: url(../image/lm10.jpg);
+	background-size: cover;
+	padding-bottom: 4rem;
+	border: solid red;
 }
 
 .reset {
-	color: yellow;
+	padding: 3rem;
+	background-image: url(../image/arbitre.jpg);
+	background-size: cover;
+	padding-bottom: 4rem;
+	border: solid yellow;
 }
-
